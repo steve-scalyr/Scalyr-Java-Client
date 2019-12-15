@@ -1,2 +1,4 @@
 target/
 .classpath
+.idea/
+scalyr-java-client.iml
