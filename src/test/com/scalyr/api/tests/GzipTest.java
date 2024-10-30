@@ -1,14 +1,13 @@
 package com.scalyr.api.tests;
 
-import com.scalyr.api.TuningConstants;
-import com.scalyr.api.knobs.ConfigurationFile;
-import com.scalyr.api.knobs.Knob;
-import com.scalyr.api.logs.EventAttributes;
-import com.scalyr.api.logs.Events;
-import com.scalyr.api.logs.LogService;
+import boss.scalyr.TuningConstants;
+import boss.scalyr.knobs.ConfigurationFile;
+import boss.scalyr.knobs.Knob;
+import boss.scalyr.logs.EventAttributes;
+import boss.scalyr.logs.Events;
+import boss.scalyr.logs.LogService;
 
 
-import org.junit.After;
 import org.junit.Ignore;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;

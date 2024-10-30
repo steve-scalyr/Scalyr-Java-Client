@@ -25,8 +25,8 @@ import java.util.concurrent.Executors;
 import org.junit.After;
 import org.junit.Before;
 
-import com.scalyr.api.internal.ScalyrUtil;
-import com.scalyr.api.internal.Sleeper;
+import boss.scalyr.internal.ScalyrUtil;
+import boss.scalyr.internal.Sleeper;
 import com.scalyr.api.tests.MockServer.ExpectedRequest;
 
 public class ScalyrApiTestBase {

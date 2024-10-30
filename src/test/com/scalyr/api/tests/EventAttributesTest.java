@@ -1,6 +1,6 @@
 package com.scalyr.api.tests;
 
-import com.scalyr.api.logs.EventAttributes;
+import boss.scalyr.logs.EventAttributes;
 import org.junit.Test;
 
 import java.util.Iterator;

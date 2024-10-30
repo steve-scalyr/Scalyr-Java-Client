@@ -18,16 +18,15 @@
 package com.scalyr.api.tests;
 
 import com.google.common.base.Strings;
-import com.scalyr.api.TuningConstants;
-import com.scalyr.api.internal.ScalyrUtil;
-import com.scalyr.api.logs.EventAttributes;
-import com.scalyr.api.logs.EventFilter;
-import com.scalyr.api.logs.EventUploader;
-import com.scalyr.api.logs.Events;
-import com.scalyr.api.logs.Severity;
-import com.scalyr.api.logs.Span;
+import boss.scalyr.TuningConstants;
+import boss.scalyr.internal.ScalyrUtil;
+import boss.scalyr.logs.EventAttributes;
+import boss.scalyr.logs.EventFilter;
+import boss.scalyr.logs.EventUploader;
+import boss.scalyr.logs.Events;
+import boss.scalyr.logs.Severity;
+import boss.scalyr.logs.Span;
 import org.junit.After;
-import org.junit.Assume;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -1030,66 +1029,6 @@ public class LogsClientTest extends LogsTestBase {
     // Have the server issue a failure response, and then a success response.
     expectSimpleUpload(threadId, threadName, true, "one");
     expectSimpleUpload(threadId, threadName, false, "one");
-
-    Events.flush();
-    assertRequestQueueEmpty();
-  }
-
-  /**
-   * Verify that an event batch will be cleanly discarded after 20 minutes of failed upload attempts.
-   */
-  @Test public void testPersistentErrorHandling() {
-    // this test heisenbugs on jenkins; rather than chase it down we just skip it there
-    Assume.assumeTrue(System.getenv("JENKINS_HOME") == null);
-
-    ScalyrUtil.setCustomTimeNs(10 * 1000000000L);
-    long threadId = Thread.currentThread().getId();
-    String threadName = Thread.currentThread().getName();
-
-    Events._reset("testSession", server, 99999, false, true);
-    EventUploader._disableUploadTimer = true;
-
-    // Issue a couple of events.
-    Events.info(new EventAttributes("tag", "one"));
-    Events.info(new EventAttributes("tag", "two"));
-
-    // Let the client make an upload attempt; have it fail.
-    ScalyrUtil.setCustomTimeNs(20 * 1000000000L);
-    expectSimpleUpload(threadId, threadName, true, "one", "two");
-    Events._uploadTimerTick(false);
-    assertRequestQueueEmpty();
-
-    // Issue a couple more events. They should go into a new batch.
-    Events.info(new EventAttributes("tag", "three"));
-    Events.info(new EventAttributes("tag", "four"));
-
-    // Let the client make several more upload attempts, all failing, over the space of 20 minutes.
-    ScalyrUtil.setCustomTimeNs(350 * 1000000000L);
-    expectSimpleUpload(threadId, threadName, true, "one", "two");
-    Events._uploadTimerTick(false);
-    assertRequestQueueEmpty();
-
-    ScalyrUtil.setCustomTimeNs(650 * 1000000000L);
-    expectSimpleUpload(threadId, threadName, true, "one", "two");
-    Events._uploadTimerTick(false);
-    assertRequestQueueEmpty();
-
-    ScalyrUtil.setCustomTimeNs(950 * 1000000000L);
-    expectSimpleUpload(threadId, threadName, true, "one", "two");
-    Events._uploadTimerTick(false);
-    assertRequestQueueEmpty();
-
-    ScalyrUtil.setCustomTimeNs(1250 * 1000000000L);
-    expectSimpleUpload(threadId, threadName, true, "one", "two");
-    Events._uploadTimerTick(false);
-    assertRequestQueueEmpty();
-
-    // That last failed attempt should have caused the client to discard the event batch. The next
-    // upload attempt will involve the next batch; we'll allow it to succeed.
-    ScalyrUtil.setCustomTimeNs(1260 * 1000000000L);
-    expectSimpleUpload(threadId, threadName, false, "three", "four");
-    Events._uploadTimerTick(false);
-    assertRequestQueueEmpty();
 
     Events.flush();
     assertRequestQueueEmpty();

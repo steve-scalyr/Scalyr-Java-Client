@@ -28,8 +28,8 @@ import java.util.concurrent.TimeUnit;
 import org.junit.After;
 import org.junit.Before;
 
-import com.scalyr.api.knobs.Knob;
-import com.scalyr.api.knobs.ConfigurationFile;
+import boss.scalyr.knobs.Knob;
+import boss.scalyr.knobs.ConfigurationFile;
 
 /**
  * Sample code.

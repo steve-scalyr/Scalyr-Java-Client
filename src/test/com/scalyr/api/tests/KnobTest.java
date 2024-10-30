@@ -17,17 +17,17 @@
 
 package com.scalyr.api.tests;
 
-import com.scalyr.api.LogHook;
-import com.scalyr.api.TuningConstants;
-import com.scalyr.api.internal.Logging;
-import com.scalyr.api.internal.ScalyrUtil;
-import com.scalyr.api.internal.SimpleRateLimiter;
-import com.scalyr.api.knobs.ConfigurationFile;
-import com.scalyr.api.knobs.ConfigurationFileFactory;
-import com.scalyr.api.knobs.Knob;
-import com.scalyr.api.knobs.LocalConfigurationFile;
-import com.scalyr.api.knobs.util.Whitelist;
-import com.scalyr.api.logs.Severity;
+import boss.scalyr.LogHook;
+import boss.scalyr.TuningConstants;
+import boss.scalyr.internal.Logging;
+import boss.scalyr.internal.ScalyrUtil;
+import boss.scalyr.internal.SimpleRateLimiter;
+import boss.scalyr.knobs.ConfigurationFile;
+import boss.scalyr.knobs.ConfigurationFileFactory;
+import boss.scalyr.knobs.Knob;
+import boss.scalyr.knobs.LocalConfigurationFile;
+import boss.scalyr.knobs.util.Whitelist;
+import boss.scalyr.logs.Severity;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -46,7 +46,7 @@ import java.util.function.Predicate;
 import java.util.HashMap;
 import java.util.stream.IntStream;
 
-import com.scalyr.api.Converter;
+import boss.scalyr.Converter;
 
 import static org.junit.Assert.*;
 
