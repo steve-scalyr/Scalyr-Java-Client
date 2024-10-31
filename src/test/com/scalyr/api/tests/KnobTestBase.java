@@ -22,9 +22,9 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 import org.junit.Before;
 
-import com.scalyr.api.json.JSONObject;
-import com.scalyr.api.knobs.ConfigurationFileFactory;
-import com.scalyr.api.knobs.KnobService;
+import se.ncg.scalyr.json.JSONObject;
+import se.ncg.scalyr.knobs.ConfigurationFileFactory;
+import se.ncg.scalyr.knobs.KnobService;
 import com.scalyr.api.tests.MockServer.ExpectedRequest;
 
 public class KnobTestBase extends ScalyrApiTestBase {

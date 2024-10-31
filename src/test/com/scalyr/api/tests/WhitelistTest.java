@@ -17,9 +17,9 @@
 
 package com.scalyr.api.tests;
 
-import com.scalyr.api.json.JSONArray;
-import com.scalyr.api.knobs.util.MockConfigurationFile;
-import com.scalyr.api.knobs.util.Whitelist;
+import se.ncg.scalyr.json.JSONArray;
+import se.ncg.scalyr.knobs.util.MockConfigurationFile;
+import se.ncg.scalyr.knobs.util.Whitelist;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;

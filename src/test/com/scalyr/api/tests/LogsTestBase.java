@@ -22,9 +22,8 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 import org.junit.Before;
 
-import com.scalyr.api.internal.ScalyrUtil;
-import com.scalyr.api.json.JSONObject;
-import com.scalyr.api.logs.LogService;
+import se.ncg.scalyr.json.JSONObject;
+import se.ncg.scalyr.logs.LogService;
 import com.scalyr.api.tests.MockServer.ExpectedRequest;
 
 public class LogsTestBase extends ScalyrApiTestBase {

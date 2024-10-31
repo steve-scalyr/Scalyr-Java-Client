@@ -22,8 +22,8 @@ import static org.junit.Assert.assertEquals;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import com.scalyr.api.json.JSONObject;
-import com.scalyr.api.json.JSONParser;
+import se.ncg.scalyr.json.JSONObject;
+import se.ncg.scalyr.json.JSONParser;
 
 public class MockServer {
   public final BlockingQueue<ExpectedRequest> expectedRequests = new LinkedBlockingQueue<ExpectedRequest>();

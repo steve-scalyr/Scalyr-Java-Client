@@ -17,17 +17,16 @@
 
 package com.scalyr.api.tests;
 
-import com.scalyr.api.ScalyrDeadlineException;
-import com.scalyr.api.internal.Sleeper;
-import com.scalyr.api.json.JSONObject;
-import com.scalyr.api.knobs.BadConfigurationFileException;
-import com.scalyr.api.knobs.ConfigurationFile;
-import com.scalyr.api.knobs.ConfigurationFile.FileState;
+import se.ncg.scalyr.ScalyrDeadlineException;
+import se.ncg.scalyr.internal.Sleeper;
+import se.ncg.scalyr.json.JSONObject;
+import se.ncg.scalyr.knobs.BadConfigurationFileException;
+import se.ncg.scalyr.knobs.ConfigurationFile;
+import se.ncg.scalyr.knobs.ConfigurationFile.FileState;
 import org.junit.After;
 import org.junit.Test;
 
 import java.io.File;
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

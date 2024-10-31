@@ -26,11 +26,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Random;
 
-import com.scalyr.api.Converter;
-import com.scalyr.api.json.JSONArray;
-import com.scalyr.api.json.JSONObject;
-import com.scalyr.api.json.JSONValue;
-import com.scalyr.api.json.RawJson;
+import se.ncg.scalyr.Converter;
+import se.ncg.scalyr.json.JSONArray;
+import se.ncg.scalyr.json.JSONObject;
+import se.ncg.scalyr.json.JSONValue;
+import se.ncg.scalyr.json.RawJson;
 
 /**
  * Utilities used in test code.

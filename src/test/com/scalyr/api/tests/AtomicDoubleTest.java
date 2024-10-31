@@ -25,7 +25,7 @@ import java.util.concurrent.CountDownLatch;
 
 import org.junit.Test;
 
-import com.scalyr.api.logs.AtomicDouble;
+import se.ncg.scalyr.logs.AtomicDouble;
 
 /**
  * Tests for AtomicDouble.
