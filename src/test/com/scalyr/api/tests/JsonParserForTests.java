@@ -19,8 +19,8 @@ package com.scalyr.api.tests;
 
 import java.util.List;
 
-import boss.scalyr.json.JSONArray;
-import boss.scalyr.json.JSONObject;
+import se.ncg.scalyr.json.JSONArray;
+import se.ncg.scalyr.json.JSONObject;
 import com.scalyr.api.tests.JsonTokenizerForTests.Token;
 import com.scalyr.api.tests.JsonTokenizerForTests.TokenType;
 

@@ -1,37 +1,12 @@
-Scalyr Java Client Library
----
-[![CircleCI](https://circleci.com/gh/scalyr/Scalyr-Java-Client/tree/master.svg?style=svg)](https://circleci.com/gh/scalyr/Scalyr-Java-Client/tree/master)
+# Scalyr Java Client Library
 
-This is the source code for the Java client to the Scalyr Logs services.
-See [scalyr.com/logapijava](https://www.scalyr.com/help/java-api) for an introduction to the
-API.
+This is a fork from Scalyrs Java client library https://github.com/steve-scalyr/Scalyr-Java-Client
+with the Scalyr Appender added. The Scalyr java client official repo has been removed from github and they are not actively supporting 
+their scalyr logback appender.
+When upgrading to Java 17 the scalyr appender had a breaking bug caused by JVM changes to CompletableFutures & ThreadLocal variables 
+which made the appender unusable with CompletableFutures. https://bugs.openjdk.org/browse/JDK-8285638
 
-We do not actively solicit outside contributions to the client library, but if you'd
-like to submit a patch, feel free to get in touch (contact@scalyr.com). And of course,
-feedback, requests, and suggestions are always welcome!
+To solve this we forked the repository, bumped it to Java 17 and fixed the issue with ThreadLocals. 
 
-
-### Adding to your project
-
-##### With Maven
-
-Add the following dependency to your project's pom.xml (check [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cscalyr%20scalyr-client) for the latest version):
-
-        <dependency>
-            <groupId>com.scalyr</groupId>
-            <artifactId>scalyr-client</artifactId>
-            <version>6.0.15</version>
-        </dependency>
-
-
-##### Downloading JARs directly
-
-* Download the Java client library from [Maven Central](https://oss.sonatype.org/content/groups/public/com/scalyr/scalyr-client/6.0.0/scalyr-client-6.0.0.jar) and add it to your project.
-
-
-#### Note about json-simple
-
-The com.scalyr.api.json package contains a bastardized copy of the json-simple library
-(http://code.google.com/p/json-simple/). We have removed code not needed for our
-purposes, and renamed the package to avoid conflicts. Thanks to Yidong Fang and Chris
-Nokleberg, the authors of json-simple, for this very handy library.
+## Build
+There is no pipeline for this library since it wont be built often. Instead you can manually push it to the boss azure maven repo.

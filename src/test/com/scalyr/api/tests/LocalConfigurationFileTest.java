@@ -17,10 +17,10 @@
 
 package com.scalyr.api.tests;
 
-import boss.scalyr.knobs.ConfigurationFile;
-import boss.scalyr.knobs.ConfigurationFileFactory;
-import boss.scalyr.knobs.Knob;
-import boss.scalyr.knobs.LocalConfigurationFile;
+import se.ncg.scalyr.knobs.ConfigurationFile;
+import se.ncg.scalyr.knobs.ConfigurationFileFactory;
+import se.ncg.scalyr.knobs.Knob;
+import se.ncg.scalyr.knobs.LocalConfigurationFile;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

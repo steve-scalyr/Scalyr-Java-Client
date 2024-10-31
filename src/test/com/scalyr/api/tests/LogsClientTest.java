@@ -18,14 +18,14 @@
 package com.scalyr.api.tests;
 
 import com.google.common.base.Strings;
-import boss.scalyr.TuningConstants;
-import boss.scalyr.internal.ScalyrUtil;
-import boss.scalyr.logs.EventAttributes;
-import boss.scalyr.logs.EventFilter;
-import boss.scalyr.logs.EventUploader;
-import boss.scalyr.logs.Events;
-import boss.scalyr.logs.Severity;
-import boss.scalyr.logs.Span;
+import se.ncg.scalyr.TuningConstants;
+import se.ncg.scalyr.internal.ScalyrUtil;
+import se.ncg.scalyr.logs.EventAttributes;
+import se.ncg.scalyr.logs.EventFilter;
+import se.ncg.scalyr.logs.EventUploader;
+import se.ncg.scalyr.logs.Events;
+import se.ncg.scalyr.logs.Severity;
+import se.ncg.scalyr.logs.Span;
 import org.junit.After;
 import org.junit.Test;
 

@@ -1,11 +1,11 @@
 package com.scalyr.api.tests;
 
-import boss.scalyr.TuningConstants;
-import boss.scalyr.knobs.ConfigurationFile;
-import boss.scalyr.knobs.Knob;
-import boss.scalyr.logs.EventAttributes;
-import boss.scalyr.logs.Events;
-import boss.scalyr.logs.LogService;
+import se.ncg.scalyr.TuningConstants;
+import se.ncg.scalyr.knobs.ConfigurationFile;
+import se.ncg.scalyr.knobs.Knob;
+import se.ncg.scalyr.logs.EventAttributes;
+import se.ncg.scalyr.logs.Events;
+import se.ncg.scalyr.logs.LogService;
 
 
 import org.junit.Ignore;

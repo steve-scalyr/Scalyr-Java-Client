@@ -17,13 +17,13 @@
 
 package com.scalyr.api.tests;
 
-import boss.scalyr.internal.ScalyrUtil;
-import boss.scalyr.json.JSONArray;
-import boss.scalyr.json.JSONObject;
-import boss.scalyr.json.JSONParser;
-import boss.scalyr.json.JSONParser.ByteScanner;
-import boss.scalyr.json.JSONParser.JsonParseException;
-import boss.scalyr.json.JSONValue;
+import se.ncg.scalyr.internal.ScalyrUtil;
+import se.ncg.scalyr.json.JSONArray;
+import se.ncg.scalyr.json.JSONObject;
+import se.ncg.scalyr.json.JSONParser;
+import se.ncg.scalyr.json.JSONParser.ByteScanner;
+import se.ncg.scalyr.json.JSONParser.JsonParseException;
+import se.ncg.scalyr.json.JSONValue;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;

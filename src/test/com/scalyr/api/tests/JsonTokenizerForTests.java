@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import boss.scalyr.internal.ScalyrUtil;
+import se.ncg.scalyr.internal.ScalyrUtil;
 
 /**
  * Simple tokenizer (lexer) for tokenizing JSON source. Placed in the test package

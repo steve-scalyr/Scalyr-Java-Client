@@ -27,13 +27,13 @@ import java.util.Random;
 
 import org.junit.Test;
 
-import boss.scalyr.Converter;
-import boss.scalyr.internal.ChunkSizeList;
-import boss.scalyr.internal.CircularByteArray;
-import boss.scalyr.internal.ScalyrUtil;
-import boss.scalyr.internal.Tuple;
-import boss.scalyr.json.JSONObject;
-import boss.scalyr.json.JSONParser;
+import se.ncg.scalyr.Converter;
+import se.ncg.scalyr.internal.ChunkSizeList;
+import se.ncg.scalyr.internal.CircularByteArray;
+import se.ncg.scalyr.internal.ScalyrUtil;
+import se.ncg.scalyr.internal.Tuple;
+import se.ncg.scalyr.json.JSONObject;
+import se.ncg.scalyr.json.JSONParser;
 
 /**
  * Tests for classes in com.scalyr.util.
